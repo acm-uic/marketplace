@@ -4,6 +4,8 @@ import Link from "next/link";
 import profilePicAdrian from "/app/images/MilkFaceCatGif.gif";
 import anotherProfile from "/app/images/dog.jpg";
 import profilePicAndre from "/app/images/photoAndre.png";
+import profileZiJunW from "/app/images/floatsink.jpg";
+
 export const AdrianKnight = () => {
   return (
     <div>
@@ -51,6 +53,25 @@ export const SamuelE = () => {
           </h3>
           <div>
             <Link href={"https://github.com/dejazzhands"}>dejazzhands</Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+}
+
+export const ZiJunW = () => {
+  return (
+    <div>
+      <div className="flex justify-center align-middle bg-blue-900 w-300px h-60px m-5 border-solid border-2 border-blue-600" >
+        <Image src={profileZiJunW} width={60} height={60} alt="profile picture of Zi Jun W"/>
+        <div className="text-white text-center w-full self-center">
+          <h3 className="font-2xl">
+            Zi Jun Wang
+          </h3>
+          <div>
+            <Link href={"https://github.com/floatsinkfc"}>floatsinkfc</Link>
           </div>
         </div>
       </div>
