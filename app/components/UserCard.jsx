@@ -4,6 +4,7 @@ import Link from "next/link";
 import profilePicAdrian from "/app/images/MilkFaceCatGif.gif";
 import anotherProfile from "/app/images/dog.jpg";
 import profilePicAndre from "/app/images/photoAndre.png";
+import profilePicManh from "app/images/manh.jpeg";
 export const AdrianKnight = () => {
   return (
     <div>
@@ -58,3 +59,21 @@ export const SamuelE = () => {
   );
 
 }
+
+export const Manh_Phan = () => {
+  return(
+    <div >
+    <div  style={{ height: '68px' }}  className="flex justify-center align-middle bg-yellow-500 w-300px  m-5 border-solid border-2 border-black cursor-pointer hover:shadow-xl" >   
+      <Image src={profilePicManh} width={60} height={60} alt=""/>
+      <div className="text-white text-center w-full self-center">
+        <h3 className="font-2xl">Manh Phan</h3>
+        <div>
+          <Link  href={"https://github.com/Mightymanh"}>@Mightymanh</Link>
+        </div>
+      </div>
+    </div>
+  </div>
+  );
+}
+
+
