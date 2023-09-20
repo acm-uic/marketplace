@@ -1,14 +1,14 @@
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
-import profilePic from "/app/images/MilkFaceCatGif.gif";
+import profilePicAdrian from "/app/images/MilkFaceCatGif.gif";
 import anotherProfile from "/app/images/dog.jpg";
 import profilePicAndre from "/app/images/photoAndre.png";
 export const AdrianKnight = () => {
   return (
     <div>
       <div className="flex justify-center align-middle bg-violet-500 w-300px h-60px m-5 border-solid border-2 border-indigo-600" >
-        <Image src={profilePic} width={60} height={60} alt="profile picture of Adrian Knight"/>
+        <Image src={profilePicAdrian} width={60} height={60} alt="profile picture of Adrian Knight"/>
         <div className="text-white text-center w-full self-center">
           <h3 className="font-2xl">
             Adrian Knight
@@ -26,7 +26,7 @@ export const FakeNamer = () => {
   return (
     <div>
       <div className="flex justify-center align-middle bg-red-500 w-300px  m-5 border-solid border-2 border-indigo-600" >
-        <Image src={profilePic} width={60} height={60} alt="profile picture of Adrian Knight"/>
+        <Image src={profilePicAdrian} width={60} height={60} alt="profile picture of Adrian Knight"/>
         <div className="text-white text-center w-full self-center">
           <h3 className="font-2xl">
             Fake Knight
@@ -56,12 +56,13 @@ export const Andre = () => {
   </div>
 
   )
+}
 
 export const SamuelE = () => {
   return (
     <div>
       <div className="flex justify-center align-middle bg-sky-900 w-300px h-60px m-5 border-solid border-2 border-blue-600" >
-        <Image src={profilePic} width={60} height={60} alt="profile picture of Samuel E"/>
+        <Image src={anotherProfile} width={60} height={60} alt="profile picture of Samuel E"/>
         <div className="text-white text-center w-full self-center">
           <h3 className="font-2xl">
             Samuel E

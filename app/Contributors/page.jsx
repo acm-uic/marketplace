@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import {AdrianKnight, Andre} from '../components/UserCard'
+import {AdrianKnight, Andre, SamuelE} from '../components/UserCard'
 
 const ContributorPage = () => {
 
@@ -12,6 +12,7 @@ const ContributorPage = () => {
       <div className='grid grid-cols-3 m-10 h-full bg-gray-300'>
         <AdrianKnight/>
         <Andre />
+        <SamuelE/>
       </div>
     </div>
   )
