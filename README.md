@@ -26,3 +26,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 Adrian Knight - [@Ajknight121](https://github.com/Ajknight121)
 Samuel E - [@dejazzhands](https://github.com/dejazzhands)
+Andre Rimes - [@voodobard](https://github.com/voodobard)
