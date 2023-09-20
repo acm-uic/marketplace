@@ -4,6 +4,7 @@ import Link from "next/link";
 import profilePicAdrian from "/app/images/MilkFaceCatGif.gif";
 import anotherProfile from "/app/images/dog.jpg";
 import profilePicAndre from "/app/images/photoAndre.png";
+import profilePicShane from "/app/images/doNotEnter.jpg";
 export const AdrianKnight = () => {
   return (
     <div>
@@ -57,4 +58,24 @@ export const SamuelE = () => {
     </div>
   );
 
+  
+
 }
+
+export const Sklimas101 = () => {
+  return (
+    <div>
+    <div className="flex justify-center align-middle bg-sky-900 w-300px h-60px m-5 border-solid border-2 border-blue-600" >
+      <Image src={profilePicShane} width={60} height={60} alt="profile picture of Shane"/>
+      <div className="text-white text-center w-full self-center">
+        <h3 className="font-2xl">
+          Shane K
+        </h3>
+        <div>
+          <Link href={"https://github.com/Sklimas101"}>Sklimas101</Link>
+        </div>
+      </div>
+    </div>
+  </div>
+  )
+};
