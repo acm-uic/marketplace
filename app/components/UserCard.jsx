@@ -8,7 +8,7 @@ export const AdrianKnight = () => {
   return (
     <div>
       <div className="flex justify-center align-middle bg-violet-500 w-300px h-60px m-5 border-solid border-2 border-indigo-600" >
-        <Image src={profilePicAdrian} width={60} height={60} alt="profile picture of Adrian Knight"/>
+        <Image className="hover:animate-ping delay-1000" src={profilePicAdrian} width={60} height={60} alt="profile picture of Adrian Knight"/>
         <div className="text-white text-center w-full self-center">
           <h3 className="font-2xl">
             Adrian Knight
@@ -21,24 +21,6 @@ export const AdrianKnight = () => {
     </div>
   );
 };
-
-export const FakeNamer = () => {
-  return (
-    <div>
-      <div className="flex justify-center align-middle bg-red-500 w-300px  m-5 border-solid border-2 border-indigo-600" >
-        <Image src={profilePicAdrian} width={60} height={60} alt="profile picture of Adrian Knight"/>
-        <div className="text-white text-center w-full self-center">
-          <h3 className="font-2xl">
-            Fake Knight
-          </h3>
-          <div>
-            <Link href={"https://github.com/Ajknight121"}>@Ajknight121</Link>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 
 export const Andre = () => {
