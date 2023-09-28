@@ -4,8 +4,10 @@ import Link from "next/link";
 import profilePicAdrian from "/app/images/MilkFaceCatGif.gif";
 import anotherProfile from "/app/images/dog.jpg";
 import profilePicAndre from "/app/images/photoAndre.png";
+import profilePicShanmukh from "/app/images/profilePicShanmukh.png";
 import profilePicShane from "/app/images/doNotEnter.jpg";
 import profilePicSrijan from "/app/images/s1.webp";
+
 export const AdrianKnight = () => {
   return (
     <div>
@@ -90,6 +92,26 @@ export const SrijanS = () => {
           </h3>
           <div>
             <Link href={"https://github.com/SrijanSuresh"}>@SrijanSuresh</Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+}
+
+
+export const Shanmukhche = () => {
+  return (
+    <div>
+      <div className="flex justify-center align-middle bg-green-500 w-300px h-60px m-5 border-solid border-2 border-green-600" >
+        <Image src={profilePicShanmukh} width={60} height={60} alt="profile picture of Shanmukh Chebrolu"/>
+        <div className="text-white text-center w-full self-center">
+          <h3 className="font-2xl">
+            Shanmukh Chebrolu
+          </h3>
+          <div>
+            <Link href={"https://github.com/shanmukhche"}>Shanmukhche</Link>
           </div>
         </div>
       </div>
