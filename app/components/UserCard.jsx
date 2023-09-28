@@ -5,11 +5,12 @@ import profilePicAdrian from "/app/images/MilkFaceCatGif.gif";
 import anotherProfile from "/app/images/dog.jpg";
 import profilePicAndre from "/app/images/photoAndre.png";
 import profilePicShane from "/app/images/doNotEnter.jpg";
+import profilePicSrijan from "/app/images/s1.webp";
 export const AdrianKnight = () => {
   return (
     <div>
       <div className="flex justify-center align-middle bg-violet-500 w-300px h-60px m-5 border-solid border-2 border-indigo-600" >
-        <Image className="hover:animate-ping delay-1000" src={profilePicAdrian} width={60} height={60} alt="profile picture of Adrian Knight"/>
+        <Image className="hover:animate-ping delay-1000" src={profilePicAdrian} width={60} height={60} alt="profile picture of Adrian Knight" />
         <div className="text-white text-center w-full self-center">
           <h3 className="font-2xl">
             Adrian Knight
@@ -25,18 +26,18 @@ export const AdrianKnight = () => {
 
 
 export const Andre = () => {
-  return(
+  return (
     <div >
-    <div  style={{ height: '68px' }}  className="flex justify-center align-middle bg-yellow-500 w-300px  m-5 border-solid border-2 border-black cursor-pointer hover:shadow-xl" >   
-      <Image src={profilePicAndre} width={60} height={60} alt=""/>
-      <div className="text-white text-center w-full self-center">
-        <h3 className="font-2xl">Andre Rimes</h3>
-        <div>
-          <Link  href={"https://github.com/voodobard"}>@voodobard</Link>
+      <div style={{ height: '68px' }} className="flex justify-center align-middle bg-yellow-500 w-300px  m-5 border-solid border-2 border-black cursor-pointer hover:shadow-xl" >
+        <Image src={profilePicAndre} width={60} height={60} alt="" />
+        <div className="text-white text-center w-full self-center">
+          <h3 className="font-2xl">Andre Rimes</h3>
+          <div>
+            <Link href={"https://github.com/voodobard"}>@voodobard</Link>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
   )
 }
@@ -45,7 +46,7 @@ export const SamuelE = () => {
   return (
     <div>
       <div className="flex justify-center align-middle bg-sky-900 w-300px h-60px m-5 border-solid border-2 border-blue-600" >
-        <Image src={anotherProfile} width={60} height={60} alt="profile picture of Samuel E"/>
+        <Image src={anotherProfile} width={60} height={60} alt="profile picture of Samuel E" />
         <div className="text-white text-center w-full self-center">
           <h3 className="font-2xl">
             Samuel E
@@ -61,7 +62,6 @@ export const SamuelE = () => {
   
 
 }
-
 export const Sklimas101 = () => {
   return (
     <div>
@@ -79,3 +79,21 @@ export const Sklimas101 = () => {
   </div>
   )
 };
+export const SrijanS = () => {
+  return (
+    <div>
+      <div className="flex justify-center align-middle bg-lime-400 w-300px h-60px m-5 border-solid border-2 border-cyan-400">
+        <Image src={profilePicSrijan} width={60} height={60} alt="profile picture of Srijan Suresh" />
+        <div className="text-blue text-center w-full self-center">
+          <h3 className="font-2xl">
+            Srijan Suresh
+          </h3>
+          <div>
+            <Link href={"https://github.com/SrijanSuresh"}>@SrijanSuresh</Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+}
