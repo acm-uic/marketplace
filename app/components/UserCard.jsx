@@ -55,7 +55,7 @@ export const SamuelE = () => {
             Samuel E
           </h3>
           <div>
-            <Link href={"https://github.com/dejazzhands"}>dejazzhands</Link>
+            <Link href={"https://github.com/dejazzhands"}>@dejazzhands</Link>
           </div>
         </div>
       </div>
@@ -75,7 +75,7 @@ export const Sklimas101 = () => {
           Shane K
         </h3>
         <div>
-          <Link href={"https://github.com/Sklimas101"}>Sklimas101</Link>
+          <Link href={"https://github.com/Sklimas101"}>@Sklimas101</Link>
         </div>
       </div>
     </div>
@@ -112,7 +112,7 @@ export const Shanmukhche = () => {
             Shanmukh Chebrolu
           </h3>
           <div>
-            <Link href={"https://github.com/shanmukhche"}>Shanmukhche</Link>
+            <Link href={"https://github.com/shanmukhche"}>@Shanmukhche</Link>
           </div>
         </div>
       </div>
