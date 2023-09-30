@@ -5,12 +5,9 @@ import logo from '../images/acmLogo.png'
 import cart from '../images/cart.png'
 import sun from "../images/sun.png"
 import moon from "../images/moon.png"
-import { useDarkMode } from "../context/DarkModeContext.js";
 
-export default function Header() {
-    const { isDarkMode, toggleDarkMode } = useDarkMode();
+export default function Header({isDarkMode,setIsDarkMode}) {
 
-    console.log(isDarkMode)
     return (
         <div className="flex items-center justify-between " >
             <div className="font-bold text-lg mt-4">
@@ -26,7 +23,7 @@ export default function Header() {
 
             <div className="flex flex-row mt-4 text-black"  style={{maxWidth:"283px"}}>
                 <input placeholder="Search" className="rounded-lg w-56 pl-2 mt-1 mr-4" style={{ height: '29px' }}  type="text"/>
-                <Image onClick={toggleDarkMode} src={isDarkMode? sun: moon} width={16} height={16} className="mr-2"/>
+                <Image onClick={()=>setIsDarkMode(!isDarkMode)} src={isDarkMode? sun: moon} width={16} height={16} className="mr-2"/>
                 <Link href="/cart" >
                     <Image  src={cart} width={60} height={50} alt="cart" className="mr-4" />
                 </Link>
