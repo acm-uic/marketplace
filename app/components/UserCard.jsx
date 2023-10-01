@@ -113,7 +113,14 @@ export const ZiJunW = () => {
             Zi Jun Wang
           </h3>
           <div>
-            <Link href={"https://github.com/floatsinkfc"}>floatsinkfc</Link>
+            <Link href={"https://github.com/floatsinkfc"}>@floatsinkfc</Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+}
 
 export const Shanmukhche = () => {
   return (
