@@ -4,6 +4,7 @@ import Link from "next/link";
 import profilePicAdrian from "/app/images/MilkFaceCatGif.gif";
 import anotherProfile from "/app/images/dog.jpg";
 import profilePicAndre from "/app/images/photoAndre.png";
+import profileZiJunW from "/app/images/floatsink.jpg";
 import profilePicManh from "app/images/manh.jpeg";
 import profilePicShanmukh from "/app/images/profilePicShanmukh.png";
 import profilePicShane from "/app/images/doNotEnter.jpg";
@@ -102,6 +103,25 @@ export const SrijanS = () => {
 }
 
 
+export const ZiJunW = () => {
+  return (
+    <div>
+      <div className="flex justify-center align-middle bg-blue-900 w-300px h-60px m-5 border-solid border-2 border-blue-600" >
+        <Image src={profileZiJunW} width={60} height={60} alt="profile picture of Zi Jun W"/>
+        <div className="text-white text-center w-full self-center">
+          <h3 className="font-2xl">
+            Zi Jun Wang
+          </h3>
+          <div>
+            <Link href={"https://github.com/floatsinkfc"}>@floatsinkfc</Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+}
+
 export const Shanmukhche = () => {
   return (
     <div>
@@ -136,5 +156,4 @@ export const Manh_Phan = () => {
   </div>
   );
 }
-
 
