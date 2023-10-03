@@ -8,11 +8,11 @@ import moon from "../images/moon.png"
 
 export default function Header({ isDarkMode, setIsDarkMode }) {
     return (
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between w-screen absolute">
             <div className="font-bold text-lg mt-4">
                 <Link className="text-2xl ml-6 mr-10 text-white hover:underline" href="/">Shop</Link>
                 <Link className="text-2xl mr-10 text-white hover:underline" href="https://acm.uic.edu/about">About</Link>
-                <Link className="text-2xl text-white hover:underline w" href='https://acm.uic.edu/about'>Contact</Link>
+                <Link className="text-2xl text-white hover:underline w" href='/Contributors'>Contact</Link>
             </div>
             <div className="mt-4">
                 <Link href="https://acm.uic.edu/">
@@ -21,8 +21,8 @@ export default function Header({ isDarkMode, setIsDarkMode }) {
             </div>
 
             <div className="flex items-center flex-row mt-4 text-black">
-                <input placeholder="Search" className="rounded-lg  w-72 pl-2 mt-1 mr-4 h-10" type="text" />
-                <Image onClick={() => setIsDarkMode(!isDarkMode)} src={isDarkMode ? sun : moon} width={28} height={28} className="mr-2" />
+                <input placeholder="Search" className="rounded-lg  w-42 pl-2 mt-1 mr-4 h-10" type="text" />
+                <Image onClick={() => setIsDarkMode(!isDarkMode)} src={isDarkMode ? sun : moon} width={28} height={28} className="mr-2 " alt="thememode"/>
                 <Link href="/cart">
                     <Image src={cart} width={60} height={50} alt="cart" className="mr-4" />
                 </Link>
