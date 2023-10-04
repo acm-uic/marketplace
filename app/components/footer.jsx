@@ -23,7 +23,7 @@ export default function Footer( {isDarkMode}) {
             </Link>
           </div>
           <div className="mt-3">
-            <Link href="https://github.com/acm-uic/marketplace" target="_blank" >
+            <Link href="https://github.com/acm-uic" target="_blank" >
               <Image src={githublogo} alt="githubACM" width={22} height={17} />
             </Link>
           </div>
