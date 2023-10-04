@@ -9,6 +9,7 @@ import profilePicManh from "app/images/manh.jpeg";
 import profilePicShanmukh from "/app/images/profilePicShanmukh.png";
 import profilePicShane from "/app/images/doNotEnter.jpg";
 import profilePicSrijan from "/app/images/s1.webp";
+import profilePicEthan from "/app/images/eky2.png";
 
 export const AdrianKnight = () => {
   return (
@@ -150,6 +151,22 @@ export const Manh_Phan = () => {
         <h3 className="font-2xl">Manh Phan</h3>
         <div>
           <Link  href={"https://github.com/Mightymanh"}>@Mightymanh</Link>
+        </div>
+      </div>
+    </div>
+  </div>
+  );
+}
+
+export const Eky2 = () => {
+  return(
+    <div >
+    <div className="flex justify-center align-middle bg-cyan-500 w-300px  m-5 border-solid border-2 border-black cursor-pointer hover:shadow-xl" >   
+      <Image src={profilePicEthan} width={60} height={60} alt=""/>
+      <div className="text-black text-center w-full self-center">
+        <h3 className="font-2xl">Ethan Ky</h3>
+        <div>
+          <Link  href={"https://github.com/eky2"}>@eky2</Link>
         </div>
       </div>
     </div>
