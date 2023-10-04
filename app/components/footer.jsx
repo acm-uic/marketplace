@@ -8,7 +8,7 @@ import youtubelogo from "../images/youtubeLogo.png";
 
 export default function Footer( {isDarkMode}) {
   return (
-    <footer style={{ background: isDarkMode ? '#D90000' : '#34A3D9' }} className="h-48 block w-full overflow-hidden mb-0">
+    <footer style={{ background: isDarkMode ? '#242526' : '#34A3D9' }} className="h-48 block w-full overflow-hidden mb-0">
       <div className=" float-left w-6/12 h-full">
         <p className="align-top mt-8 ml-8 font-bold ">Association for Computing Machinery</p>
         <p className="mt-3 ml-8 leading-5">SEL-E 2264</p>
