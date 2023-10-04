@@ -8,14 +8,14 @@ import moon from "../images/moon.png"
 
 export default function Header({ isDarkMode, setIsDarkMode }) {
     return (
-        <div className="flex items-center justify-between w-screen absolute">
+        <div className="flex items-center justify-between w-full absolute">
             <div className="font-bold text-lg mt-4">
-                <Link className="text-2xl ml-6 mr-10 text-white hover:underline" href="/">Shop</Link>
-                <Link className="text-2xl mr-10 text-white hover:underline" href="https://acm.uic.edu/about">About</Link>
+                <Link href="/" className="text-2xl ml-6 mr-10 text-white hover:underline">Shop</Link>
+                <Link className="text-2xl mr-10 text-white hover:underline" href="https://acm.uic.edu/about" target="_blank">About</Link>
                 <Link className="text-2xl text-white hover:underline w" href='/Contributors'>Contact</Link>
             </div>
             <div className="mt-4">
-                <Link href="https://acm.uic.edu/">
+                <Link href="https://acm.uic.edu/" target="_blank">
                     <Image src={logo} alt="ACM Logo" width={100} height={64} />
                 </Link>
             </div>

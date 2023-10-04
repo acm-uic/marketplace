@@ -14,7 +14,7 @@ module.exports = {
         "ACMDARK": "#242526",
         "ACMLIGHT": "#E6AF2E",
         "ACMBLUE": "#34A3D9",
-        "SHOPTEXTSHADOW": "rgba(217, 0, 0, 0.25)",
+        "SHOPTEXTSHADOW": "rgba(0, 0, 0, 0.25)",
         "HEROSHADOW": "rgba(255, 255, 255, 0.50)"
       },
       textShadow: {
