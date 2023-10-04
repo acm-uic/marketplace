@@ -4,6 +4,9 @@ import Image from "next/image";
 import discordlogo from "../images/DiscordLogo.png";
 import githublogo from "../images/github.png";
 import youtubelogo from "../images/youtubeLogo.png";
+import linkedinlogo from "../images/linkedin.png";
+import instagramlogo from "../images/instaLogo.png";
+
 
 
 export default function Footer( {isDarkMode}) {
@@ -19,17 +22,27 @@ export default function Footer( {isDarkMode}) {
         <div className="mr-8 ">
           <div>
             <Link href="https://discord.gg/Afy6gf4" target="_blank" >
-              <Image src={discordlogo} alt="DiscordACM" width={22} height={17} />
+              <Image src={discordlogo} alt="DiscordACM" width={17} height={17} />
             </Link>
           </div>
           <div className="mt-3">
             <Link href="https://github.com/acm-uic" target="_blank" >
-              <Image src={githublogo} alt="githubACM" width={22} height={17} />
+              <Image src={githublogo} alt="githubACM" width={17} height={17} />
             </Link>
           </div>
           <div className="mt-3">
             <Link href="https://www.youtube.com/channel/UCZ0uPmRjJrl6XEMU2CtYH5w" target="_blank" >
-              <Image src={youtubelogo} alt="youtubeACM" width={22} height={17} />
+              <Image src={youtubelogo} alt="youtubeACM" width={17} height={17} />
+            </Link>
+          </div>
+          <div className="mt-3">
+            <Link href="https://www.linkedin.com/company/acm-cs-uic/" target="_blank" >
+              <Image src={linkedinlogo} alt="linkedinACM" width={17} height={17} />
+            </Link>
+          </div>
+          <div className="mt-3">
+            <Link href="https://www.instagram.com/acmatuic/" target="_blank" >
+              <Image src={instagramlogo} alt="instaACM" width={17} height={17} />
             </Link>
           </div>
         </div>
