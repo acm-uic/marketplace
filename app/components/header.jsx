@@ -1,3 +1,4 @@
+'use client'
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -6,9 +7,10 @@ import cart from '../images/cart.png'
 import sun from "../images/sun.png"
 import moon from "../images/moon.png"
 
-export default function Header({ isDarkMode, setIsDarkMode }) {
+export default function Header({ isDarkMode, setIsDarkMode, invertedColor }) {
+    const colorHeader = invertedColor ? "invert" : "invert-0";
     return (
-        <div className="flex items-center justify-between w-full absolute">
+        <div className={`flex items-center justify-between  w-full absolute ${colorHeader}`}>
             <div className="font-bold text-lg mt-4">
                 <Link href="/" className="text-2xl ml-6 mr-10 text-white hover:underline">Shop</Link>
                 <Link className="text-2xl mr-10 text-white hover:underline" href="https://acm.uic.edu/about" target="_blank">About</Link>

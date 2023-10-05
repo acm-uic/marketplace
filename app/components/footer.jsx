@@ -12,13 +12,13 @@ import instagramlogo from "../images/instaLogo.png";
 export default function Footer( {isDarkMode}) {
   return (
     <footer style={{ background: isDarkMode ? '#242526' : '#34A3D9' }} className="h-52 block w-full overflow-hidden mb-0">
-      <div className=" float-left w-6/12 h-full">
-        <p className="align-top mt-8 ml-8 font-bold ">Association for Computing Machinery</p>
+      <div className=" float-left w-6/12 h-full text-white">
+        <p className="align-top mt-8 ml-8 font-bold">Association for Computing Machinery</p>
         <p className="mt-3 ml-8 leading-5">SEL-E 2264</p>
         <p className="ml-8 leading-5">950 S Halsted St </p>
         <p className="ml-8 leading-5">Chicago, IL 60607</p>
       </div>
-      <div className="w-6/12 flex flex-col mt-8 items-end h-full">
+      <div className="w-6/12 flex flex-col mt-8 items-end h-full text-white">
         <div className="mr-8 ">
           <div>
             <Link href="https://discord.gg/Afy6gf4" target="_blank" >
