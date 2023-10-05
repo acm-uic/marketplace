@@ -6,11 +6,11 @@ import cart from '../images/cart.png'
 import sun from "../images/sun.png"
 import moon from "../images/moon.png"
 
-export default function Header({ isDarkMode, setIsDarkMode }) {
+export default function Header({ isDarkMode, setIsDarkMode,scrollToProductList }) {
     return (
         <div className="flex items-center justify-between w-full absolute">
             <div className="font-bold text-lg mt-4">
-                <Link href="/" className="text-2xl ml-6 mr-10 text-white hover:underline">Shop</Link>
+                <Link href="/" onClick={scrollToProductList} className="text-2xl ml-6 mr-10 text-white hover:underline">Shop</Link>
                 <Link className="text-2xl mr-10 text-white hover:underline" href="https://acm.uic.edu/about" target="_blank">About</Link>
                 <Link className="text-2xl text-white hover:underline w" href='/Contributors'>Contact</Link>
             </div>
