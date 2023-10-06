@@ -19,9 +19,7 @@ export default function Home() {
   useEffect(() => {
     // change this to fetch data
     setProductList(listOfProduct)
-
   }, [listOfProduct])
-
 
   return (
 
