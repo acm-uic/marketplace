@@ -20,7 +20,7 @@ export const AdrianKnight = () => {
             Adrian Knight
           </h3>
           <div>
-            <Link href={"https://github.com/Ajknight121"}>@Ajknight121</Link>
+            <Link href={"https://github.com/Ajknight121"} target="_blank">@Ajknight121</Link>
           </div>
         </div>
       </div>
@@ -37,7 +37,7 @@ export const Andre = () => {
         <div className="text-white text-center w-full self-center">
           <h3 className="font-2xl">Andre Rimes</h3>
           <div>
-            <Link href={"https://github.com/voodobard"}>@voodobard</Link>
+            <Link href={"https://github.com/voodobard"} target="_blank">@voodobard</Link>
           </div>
         </div>
       </div>
@@ -56,7 +56,7 @@ export const SamuelE = () => {
             Samuel E
           </h3>
           <div>
-            <Link href={"https://github.com/dejazzhands"}>@dejazzhands</Link>
+            <Link href={"https://github.com/dejazzhands"} target="_blank">@dejazzhands</Link>
           </div>
         </div>
       </div>
@@ -76,7 +76,7 @@ export const Sklimas101 = () => {
           Shane K
         </h3>
         <div>
-          <Link href={"https://github.com/Sklimas101"}>@Sklimas101</Link>
+          <Link href={"https://github.com/Sklimas101"} target="_blank">@Sklimas101</Link>
         </div>
       </div>
     </div>
@@ -93,7 +93,7 @@ export const SrijanS = () => {
             Srijan Suresh
           </h3>
           <div>
-            <Link href={"https://github.com/SrijanSuresh"}>@SrijanSuresh</Link>
+            <Link href={"https://github.com/SrijanSuresh"} target="_blank">@SrijanSuresh</Link>
           </div>
         </div>
       </div>
@@ -113,7 +113,7 @@ export const ZiJunW = () => {
             Zi Jun Wang
           </h3>
           <div>
-            <Link href={"https://github.com/floatsinkfc"}>@floatsinkfc</Link>
+            <Link href={"https://github.com/floatsinkfc"} target="_blank">@floatsinkfc</Link>
           </div>
         </div>
       </div>
@@ -132,7 +132,7 @@ export const Shanmukhche = () => {
             Shanmukh Chebrolu
           </h3>
           <div>
-            <Link href={"https://github.com/shanmukhche"}>@Shanmukhche</Link>
+            <Link href={"https://github.com/shanmukhche"} target="_blank">@Shanmukhche</Link>
           </div>
         </div>
       </div>
@@ -149,7 +149,7 @@ export const Manh_Phan = () => {
       <div className="text-white text-center w-full self-center">
         <h3 className="font-2xl">Manh Phan</h3>
         <div>
-          <Link  href={"https://github.com/Mightymanh"}>@Mightymanh</Link>
+          <Link  href={"https://github.com/Mightymanh"} target="_blank">@Mightymanh</Link>
         </div>
       </div>
     </div>
