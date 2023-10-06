@@ -4,10 +4,9 @@ import Header from "./components/header";
 import HeroScreen from "./components/hero"
 import Footer from "./components/footer"
 import ProductList from "./components/productlist";
-import { useEffect, useState, useRef } from "react";
+import { useState, useRef } from "react";
 
 export default function Home() {
-  const [color, setColor] = useState("linear-gradient(180deg, #D90000 88.89%, #242526 100%)");
   const [isDarkMode, setIsDarkMode] = useState(true)
   const productListRef = useRef(null);
   
