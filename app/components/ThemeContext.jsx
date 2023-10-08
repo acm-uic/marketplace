@@ -5,10 +5,9 @@ const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(true);
-  const [invertColors, setInvertColors] = useState(false); 
 
   return (
-    <ThemeContext.Provider value={{ isDarkMode, setIsDarkMode, invertColors, setInvertColors }}>
+    <ThemeContext.Provider value={{ isDarkMode, setIsDarkMode }}>
       {children}
     </ThemeContext.Provider>
   );

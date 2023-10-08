@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        'contributor': '5px 5px 0px -2px rgba(0,0,0,1), 10px 10px 6px -4px rgba(155,155,155,1)'
+      },
       backgroundImage: {},
       colors: {
         "ACMPrimary": "#D90000",
@@ -21,6 +24,30 @@ module.exports = {
         hero: '3px 6px 4px var(--tw-shadow-color)',
         DEFAULT: '0 2px 4px var(--tw-shadow-color)',
         lg: '0 8px 16px var(--tw-shadow-color)',
+      },
+      animation:{
+        typewriter: 'typewriter 2s steps(44) 1s 1 normal both, blinkTextCursor 1000ms steps(44) infinite normal',
+      },
+      keyframes:{
+        typewriter: {
+          from: {
+            width: '0',
+          },
+          to: {
+            width: '100%',
+          },
+        },
+        blinkTextCursor: {
+          from: {
+            borderColor: 'transparent',
+          },
+          to: {
+            borderColor: 'white',
+          },
+          '50%': {
+            borderColor: 'white',
+          },
+        },
       },
     },
   },
