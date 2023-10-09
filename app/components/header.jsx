@@ -24,7 +24,7 @@ export default function Header({ isDarkMode, setIsDarkMode, invertedColor }) {
             <div className="flex items-center flex-row mt-4 text-black">
                 <input placeholder="Search" className="rounded-lg  w-42 pl-2 mt-1 mr-4 h-10" type="text" />
                 <Image onClick={() => setIsDarkMode(!isDarkMode)} src={isDarkMode ? sun : moon} width={28} height={28} className="mr-2 " alt="thememode"/>
-                <Link href="/cart">
+                <Link href="/Cart">
                     <Image src={cart} width={60} height={50} alt="cart" className="mr-4" />
                 </Link>
             </div>
