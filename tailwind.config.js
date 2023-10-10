@@ -26,7 +26,7 @@ module.exports = {
         lg: '0 8px 16px var(--tw-shadow-color)',
       },
       animation:{
-        typewriter: 'typewriter 2s steps(44) 1s 1 normal both, blinkTextCursor 1000ms steps(44) infinite normal',
+        typewriter: 'typewriter 2s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) 5 normal',
       },
       keyframes:{
         typewriter: {
