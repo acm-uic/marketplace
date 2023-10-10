@@ -1,26 +1,27 @@
-import Link from 'next/link'
-import React from 'react'
-import {AdrianKnight, Andre, SamuelE, Shanmukhche, Sklimas101, SrijanS, Manh_Phan, ZiJunW} from '../components/UserCard'
+"use client"
+import Link from "next/link";
+import { useState, useRef, useEffect } from "react";
+import { useTheme } from "../components/ThemeContext";
+import ContributorHeroScreen from "./contributorhero";
+import ContributorPage from "./contributor";
 
-const ContributorPage = () => {
+export default function WebNContributorScreen() {
+  const { isDarkMode } = useTheme();
+  const productListRef = useRef(null);
+  
 
-  return (
-    <div className='h-full w-full'>
-      <Link href={"/"}>Return to homepage</Link>
-      <h1>Our Contributors</h1>
+  const scrollToProductList = () => { //Scroll Animation
+    productListRef.current.scrollIntoView({ 
+    behavior: "smooth",
+    });
+  };
 
-      <div className='grid grid-cols-3 m-10 h-full bg-gray-300 min-w-[700px]'>
-        <AdrianKnight/>
-        <Andre />
-        <SamuelE/>
-        <ZiJunW/>
-        <Manh_Phan/>
-        <Shanmukhche/>
-        <Sklimas101/>
-        <SrijanS/>
-      </div>
+  return ( 
+    <div className="w-full h-full text-white" >
+      <ContributorHeroScreen scrollToProductList={scrollToProductList} isDarkMode={isDarkMode}/>
+      <ContributorPage productListRef={productListRef} isDarkMode={isDarkMode}/>
+      
     </div>
-  )
+  );
 }
 
-export default ContributorPage

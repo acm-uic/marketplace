@@ -6,10 +6,11 @@ import githublogo from "../images/github.png";
 import youtubelogo from "../images/youtubeLogo.png";
 import linkedinlogo from "../images/linkedin.png";
 import instagramlogo from "../images/instaLogo.png";
+import { useTheme } from "./ThemeContext";
 
 
-
-export default function Footer( {isDarkMode}) {
+export default function Footer() {
+  const { isDarkMode } = useTheme();
   return (
     <footer style={{ background: isDarkMode ? '#242526' : '#34A3D9' }} className="h-52 block w-full overflow-hidden mb-0">
       <div className=" float-left w-6/12 h-full text-white">
@@ -47,7 +48,7 @@ export default function Footer( {isDarkMode}) {
           </div>
         </div>
         <div className=" mr-8 mt-3 font-bold text-lg">
-            <Link href="/Contributors" >
+            <Link href="/Contributors">
               Website Credit & Contributors
             </Link>
         </div>
