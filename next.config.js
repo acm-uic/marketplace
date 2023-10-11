@@ -1,4 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {}
 
-module.exports = nextConfig
+//images
+module.exports = {
+    images: {
+        domains: ['wikimedia.com', 'unsplash.com'],
+    },
+}
+
