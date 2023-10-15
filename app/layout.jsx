@@ -1,10 +1,10 @@
-'use client'
+
 import './globals.css'
 // import { Inter } from 'next/font/google'
 import React from 'react';
 import Header from './components/header'; // Import your Header component
 import Footer from './components/footer'; // Import your Footer component
-import { ThemeProvider } from './components/ThemeContext';
+import PageLayout from './pageLayout';
 // const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <ThemeProvider>
+    <PageLayout>
       <html lang="en" className="w-full h-full">
         <body className="w-full h-full">
           <Header /> 
@@ -24,6 +24,6 @@ export default function RootLayout({ children }) {
           <Footer /> 
         </body>
       </html>
-    </ThemeProvider>
+    </PageLayout>
   )
 }
