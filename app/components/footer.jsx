@@ -7,7 +7,7 @@ import githublogo from "../images/github.png";
 import youtubelogo from "../images/youtubeLogo.png";
 import linkedinlogo from "../images/linkedin.png";
 import instagramlogo from "../images/instaLogo.png";
-import { useTheme } from "./ThemeContext";
+import { useTheme } from "../Domain/ThemeContext";
 
 
 export default function Footer() {
