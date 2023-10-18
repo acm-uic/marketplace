@@ -38,4 +38,6 @@ Shane K - [@Sklimas101](https://github.com/Sklimas101)
 
 Srijan Suresh - [@SrijanSuresh](https://github.com/SrijanSuresh)
 
-Zi Jun Wang - [floatsinkfc](https://github.com/floatsinkfc)
+Zi Jun Wang - [@floatsinkfc](https://github.com/floatsinkfc)
+
+Sathvik Ram Lanka = [@RamLanka05](https://github.com/RamLanka05)
