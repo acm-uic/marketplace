@@ -4,7 +4,8 @@ import HeroScreen from "./components/hero"
 import ProductList from "./components/productlist";
 import { useState, useRef, useEffect } from "react";
 import { useTheme } from "./components/ThemeContext";
-import listOfProduct from './testData/produts';
+import {listOfProduct} from './testData/produts';
+
 
 
 export default function Home() {

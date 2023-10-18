@@ -12,7 +12,7 @@ export default function Header() {
     const { isDarkMode, setIsDarkMode, invertColors } = useTheme();
     const colorHeader = invertColors ? "invert" : "invert-0";
     return (
-        <div className={`flex items-center justify-between  w-full absolute ${colorHeader}`}>
+        <div className={`flex items-center justify-between   w-full absolute ${colorHeader}`}>
             <div className="font-bold text-lg mt-4">
                 <Link href="/"  className="text-2xl ml-6 mr-10 text-white hover:underline">Shop</Link>
                 <Link className="text-2xl mr-10 text-white hover:underline" href="https://acm.uic.edu/about" target="_blank">About</Link>
@@ -26,7 +26,7 @@ export default function Header() {
 
             <div className="flex items-center flex-row mt-4 text-black">
                 <input placeholder="Search" className="rounded-lg  w-42 pl-2 mt-1 mr-4 h-10" type="text" />
-                <Image onClick={() => setIsDarkMode(!isDarkMode)} src={isDarkMode ? sun : moon} width={28} height={28} className="mr-2 " alt="thememode"/>
+                <Image onClick={() => setIsDarkMode(!isDarkMode)} src={isDarkMode ? sun : moon} width={28} height={28} className="mr-2 cursor-pointer" alt="thememode"/>
                 <Link href="/Cart">
                     <Image src={cart} width={60} height={50} alt="cart" className="mr-4" />
                 </Link>
