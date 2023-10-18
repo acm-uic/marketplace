@@ -28,12 +28,12 @@ export default function CartPage() {
     },[cartProducts])
 
     return (
-        <div className={`${isDarkMode?'bg-ACMPrimary':'bg-ACMBLUE'} text-white flex flex-col items-center  justify-center min-h-screen bg-cover bg-center w-full`}>
+        <div className={`${isDarkMode?'bg-ACMPrimary':'bg-ACMBLUE'} text-white flex flex-col items-center justify-center min-h-screen bg-cover bg-center w-full`}>
             
             <div className='mt-28'>
-            {cartProducts && cartProducts.map((porduct)=>{
+            {cartProducts && cartProducts.map((product)=>{
                 return(
-                    <CartProduct id={porduct.id} tags={porduct.tags} title={porduct.title} price={porduct.price} quantity={porduct.quantity} imgUrl={porduct.imgUrl} properties={porduct.properties}/>
+                    <CartProduct key={product.id} id={product.id} tags={product.tags} title={product.title} price={product.price} quantity={product.quantity} imgUrl={product.imgUrl} properties={product.properties}/>
                 )
             })}
             </div>
