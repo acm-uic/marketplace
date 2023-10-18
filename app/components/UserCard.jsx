@@ -154,3 +154,21 @@ export const Manh_Phan = () => {
     </div>
   );
 };
+
+export const SathvikL = () => {
+  return (
+    <div>
+      <div className="flex justify-center align-middle bg-white shadow-contributor max-w-[380px] h-[100px] m-5 border-solid border-2 border-black">
+        <Image className="rounded-[50%] border-green-500 border-[4px] -translate-x-[20%] -translate-y-4" src={profilePicShanmukh} width={100} height={100} alt="" />
+        <div className="text-black text-center w-full self-center mr-5">
+          <h3 className="text-2xl">
+          Sathvik Ram Lanka
+          </h3>
+          <div>
+            <Link href={"https://github.com/RamLanka05"} target="_blank">@RamLanka05</Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};

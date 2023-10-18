@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import React, { useEffect } from 'react'
-import {AdrianKnight, Andre, SamuelE, Shanmukhche, Sklimas101, SrijanS, Manh_Phan, ZiJunW} from '../components/UserCard'
+import {AdrianKnight, Andre, SamuelE, Shanmukhche, Sklimas101, SrijanS, Manh_Phan, ZiJunW, SathvikL} from '../components/UserCard'
 
 const ContributorPage = ( {isDarkMode, productListRef}) => {
 
@@ -16,6 +16,7 @@ const ContributorPage = ( {isDarkMode, productListRef}) => {
             <SamuelE/>
             <ZiJunW/>
             <Manh_Phan/>
+            <SathvikL/>
             <Shanmukhche/>
             <Sklimas101/>
             <SrijanS/>
