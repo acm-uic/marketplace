@@ -14,20 +14,14 @@ export default function CartProduct({id, tags, title, price, quantity, imgUrl, p
 
     
     return (
-        <div  className=" shadow-2xl w-shadow-lg bg-white text-ACMDARK mb-7 h-44 flex flex-row items-center rounded-2xl" style={{ width: 1400,}}>
-            <Image src={imgUrl} width={150} height={150} style={{ height: 150 }} />
+        <div className={` shadow-2xl w-shadow-lg bg-white text-ACMDARK mb-7 h-44 flex flex-row items-center rounded-2xl w-[88vw]`}>
+            <Image src={imgUrl} width={150} height={150} className="h-32 ml-2"/>
             <div className="ml-10 w-9/12">
                 <Link href={`products/${id}`} className="font-extrabold text-3xl h-full">{title}</Link>
             
                 {properties && properties.map((prop) => (
-                    <div className='text-lg	' key={prop}>
-                        {tags && tags.includes('pen') && (
-                            <h2>Ink Color: {prop}</h2> //
-                        )}
-
-                        {tags && tags.includes('sticker')  && (
-                            <h2>Sticker Size: {prop}</h2>
-                        )}
+                    <div className='text-lg' key={prop}>
+                        <h2>{prop}</h2>
                     </div>
                 ))}
             </div>

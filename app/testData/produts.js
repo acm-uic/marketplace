@@ -121,6 +121,6 @@ export const listOfProduct = [
         tags: ['sticker', 'decorations', 'ACM Merch'],
         quantity:1,
         properties:[ "Small",]
-    }
+    },
  ]
 
