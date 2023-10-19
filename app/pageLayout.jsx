@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import { ThemeProvider } from './components/ThemeContext';
+import { ThemeProvider } from './Domain/ThemeContext';
 
 export default function PageLayout({children}){
   return(

@@ -3,10 +3,11 @@ import Link from "next/link";
 import HeroScreen from "./components/hero"
 import ProductList from "./components/productlist";
 import { useState, useRef, useEffect } from "react";
-import { useTheme } from "./components/ThemeContext";
+import { useTheme } from "./Domain/ThemeContext";
 import {listOfProduct} from './testData/produts';
 
 
+import { ProductProvider } from "./Domain/ProductContext";
 
 export default function Home() {
   const { isDarkMode } = useTheme();
@@ -18,15 +19,14 @@ export default function Home() {
   const scrollToProductList = () => { //Scroll \\\\
     productList.current.scrollIntoView({ behavior: "smooth" });
   };
-  useEffect(() => {
-    // change this to fetch data
-    setProductList(listOfProduct)
-  }, [productList])
+  
 
   return ( 
     <div className="w-full h-full text-white" >
       <HeroScreen scrollToProductList={scrollToProductList} isDarkMode={isDarkMode}/>
-      <ProductList productList={productList} isDarkMode={isDarkMode} />
+      <ProductProvider>
+        <ProductList productList={productList} isDarkMode={isDarkMode} />
+      </ProductProvider>
       
     </div>
 
