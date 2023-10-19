@@ -11,7 +11,7 @@ import { ProductProvider } from "./Domain/ProductContext";
 
 export default function Home() {
   const { isDarkMode } = useTheme();
-  const productListRef = useRef(null);
+  const productListRef = useRef([]);
   const [productList, setProductList] = useState([])
 
   

@@ -2,7 +2,7 @@
 import React from 'react'
 import CartProduct from '../components/cartProduct';
 import {cartProducts} from '../testData/produts';
-import { useTheme } from "../components/ThemeContext";
+import { useTheme } from "../Domain/ThemeContext";
 import { useState,useEffect } from 'react';
 
 export default function CartPage() {
@@ -25,7 +25,7 @@ export default function CartPage() {
         })
         setSubTotal(newSubtotal.toFixed(2))
 
-    },[cartProducts])
+    },[])
 
     return (
         <div className={`${isDarkMode?'bg-ACMPrimary':'bg-ACMBLUE'} text-white flex flex-col items-center justify-center min-h-screen bg-cover bg-center w-full`}>
