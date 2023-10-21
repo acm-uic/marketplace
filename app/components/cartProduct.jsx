@@ -1,7 +1,6 @@
 'use client'
 import Link from "next/link";
 import Image from "next/image"
-import Image from "next/image"
 export default function CartProduct({id, tags, title, price, quantity, imgUrl, properties }) {
 
     function handleEnter(e) {
