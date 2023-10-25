@@ -27,8 +27,13 @@ module.exports = {
       },
       animation:{
         typewriter: 'typewriter 2s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) 5 normal',
+        dropTop: 'dropTop 0.2s ease-in'
       },
       keyframes:{
+        dropTop:{
+            '0%': {transform: 'translate(50%,50%)', opacity:'0',scale:'0.5' },
+            '100%': {transform:'translate(0%,0%)',opacity:'1',scale:'1'}
+        },
         typewriter: {
           from: {
             width: '0',
