@@ -16,7 +16,7 @@ export default function CartPage() {
     useEffect(() => {
         let newSubtotal = 0
         cartProducts.map((product) => {
-            newSubtotal += product.price
+            newSubtotal += product.price*product.quantity
         })
         setSubTotal(newSubtotal.toFixed(2))
 
@@ -44,7 +44,7 @@ export default function CartPage() {
                 Checkout
             </button>
         </div>
-            <ModalCheckOut subTotal={subTotal} showModal={showModal} setShowModal={setShowModal} />
+            <ModalCheckOut products={cartProducts} subTotal={subTotal} showModal={showModal} setShowModal={setShowModal} />
         </div>
     )
 }
