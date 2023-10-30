@@ -6,7 +6,6 @@ import { useProducts } from "../Domain/ProductContext";
 
 export default function ProductList({productList, isDarkMode }) {
   const {products} = useProducts();
-  console.log(products);
   return (
     <div
       ref={productList} 
@@ -18,7 +17,7 @@ export default function ProductList({productList, isDarkMode }) {
           {products.map((product) => {
             return (
               <div key={product.id}>
-                <Product isDarkMode={isDarkMode} id={product.id} price={product.price} title={product.title} imgUrl={product.imgUrl} />
+                <Product isDarkMode={isDarkMode} product={product}/>
               </div>
             )
           })}

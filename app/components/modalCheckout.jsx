@@ -44,7 +44,7 @@ export default function ModalCheckOut({ products, showModal, setShowModal, subTo
         const data = {
             email: email,
             name: name,
-            cart: products   // change this to the list of id's of the products that are in the cart
+            cart: products  
         }
         setLoading(true)
         try {
@@ -98,7 +98,7 @@ export default function ModalCheckOut({ products, showModal, setShowModal, subTo
                                                     <div className='w-10/12 flex  flex-col items-end '>
                                                         {products && products.map((product) => {
                                                             return (
-                                                                <h1 className="w-60 text-md flex flex-row justify-end mr-1 mb-1">{product.quantity}x {product.title}-${product.price}</h1>
+                                                                <h1 className="w-60 text-md flex flex-row justify-end mr-1 mb-1">{product.cartQuantity}x {product.title}-${product.price}</h1>
                                                             )
                                                         })}
                                                         <div className={`w-60 flex justify-between flex-row text-xl font-bold mb-4  text-ACMDARK`}>
