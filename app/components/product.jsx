@@ -39,6 +39,7 @@ export default function Product({ product, isDarkMode }) {
           <h1 className="text-lg bold">{title}</h1>
           <h2 className={`text-2xl ${hovered ? 'flex' : 'hidden'}`}  >${price}</h2>
           <Image
+            alt="Add to Cart Icon"
             onClick={(e) => handleClick(e, product)}
             src={isInCart(id)  ? cartFull : cartNotFull}
             width={30}

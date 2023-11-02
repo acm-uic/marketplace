@@ -80,7 +80,7 @@ export default function EmailSent({ id, setEmailSent, setError, setLoading, setE
     <div className="w-full h-full flex flex-col items-center justify-center">
       <div className="h-1/2 flex items-center justify-center flex-col ">
         <div className='w-28 h-28 rounded-full border-2 border-black flex items-center justify-center'>
-          <Image src={emailImg} height={70} width={70} />
+          <Image src={emailImg} height={70} width={70} alt='Email Icon'/>
         </div>
         <h1 className="text-2xl font-bold mt-2">Verify your email</h1>
       </div>

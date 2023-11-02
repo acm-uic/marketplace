@@ -34,7 +34,7 @@ export default function CartPage() {
                 {cartProducts.length === 0 ?
                     <div className='flex flex-col items-center justify-center mt-10'>
                         <div className='h-40 w-40 rounded-full border-2 border-black flex items-center justify-center mb-4'>
-                            <Image src={emptyCart} width={100} height={100} />
+                            <Image src={emptyCart} width={100} height={100}  alt='Empty Cart Image'/>
                         </div>
                         <h1 className='text-3xl font-bold mb-2'>Your Cart is currently empty</h1>
                         <p className='text-lg'>Looks Like you havent add anything to your cart yet</p>

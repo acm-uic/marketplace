@@ -7,7 +7,7 @@ export default function EmailError({ handleModalClose, handleEnter, handleLeave,
                 <div className="w-[95%] text-ACMDARK flex justify-end ">
                     <h1 onMouseEnter={handleEnter} onMouseLeave={handleLeave} onClick={handleModalClose} className="font-bold cursor-pointer text-2xl duration-200 transition-all ease-in ">X</h1>
                 </div>
-                <Image src={error} width={100} height={100} className="animate-slideIn"/>
+                <Image src={error} width={100} height={100} className="animate-slideIn" alt="Error icon"/>
             </div>
             <div className="flex flex-col items-ceter justify-evenly h-1/2 animate-slideIn">
                 <h1 className="flex justify-center text-lg font-semibold">ERROR: {errorMessage}</h1>

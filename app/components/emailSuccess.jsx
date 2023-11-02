@@ -10,7 +10,7 @@ export default function EmailSuccess({ handleModalClose}) {
                 <div className="w-[95%] text-ACMDARK flex justify-end ">
                     <h1 onMouseEnter={handleEnter} onMouseLeave={handleLeave} onClick={handleModalClose} className="font-bold cursor-pointer text-2xl duration-200 transition-all ease-in ">X</h1>
                 </div>
-                <Image src={approve} width={100} height={100} className="animate-slideIn" />
+                <Image src={approve} width={100} height={100} className="animate-slideIn" alt="Success Icon" />
             </div>
             <h1 className=" animate-slideIn text-lg font-semibold mb-2 mt-4 by-4">An Email Has Been Sent to Your Inbox</h1>
             <p className=" animate-slideIn w-4/5 h-32 text  text-lg">You have successfully completed your Pushared reservation. Now, all that remains is to visit the ACM Office to finalize your payment and pick up your items.</p>
