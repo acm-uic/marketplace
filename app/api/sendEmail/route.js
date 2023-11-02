@@ -62,12 +62,13 @@ export async function POST(request) {
 
         const purchaseId = purchase.id;
 
+        // Put the Env variables
         const transporter = nodemailer.createTransport({
-            host: 'smtp-relay.brevo.com',
-            port: 587,
+            host: '',
+            port: ,
             auth: {
-                user: 'andre.2004.rimes@gmail.com',
-                pass: '0nXs2WcdZxISEGyP',
+                user: ',
+                pass: '',
             }
         });
 
