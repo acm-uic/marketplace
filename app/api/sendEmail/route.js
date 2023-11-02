@@ -62,13 +62,12 @@ export async function POST(request) {
 
         const purchaseId = purchase.id;
 
-        // Put the Env variables
         const transporter = nodemailer.createTransport({
-            host: '',
-            port: ,
+            host: process.env.SMTP_Host,
+            port: process.env.SMTP_Port,
             auth: {
-                user: ',
-                pass: '',
+                user: process.env.SMTP_User,
+                pass: process.env.SMTP_Pass,
             }
         });
 
