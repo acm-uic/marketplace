@@ -1,6 +1,6 @@
 import Image from "next/image"
 import error from '../images/error.png'
-export default function EmailError({ handleModalClose, handleEnter, handleLeave, setError }) {
+export default function EmailError({ handleModalClose, handleEnter, handleLeave, setError,errorMessage }) {
     return (
         <div className=" flex h-full flex-col items-center ">
             <div className="bg-[#E6676B] w-full flex-col h-2/5 flex items-center justify-center rounded-t-lg">
@@ -10,8 +10,8 @@ export default function EmailError({ handleModalClose, handleEnter, handleLeave,
                 <Image src={error} width={100} height={100} className="animate-slideIn"/>
             </div>
             <div className="flex flex-col items-ceter justify-evenly h-1/2 animate-slideIn">
-                <h1 className="flex justify-center text-lg font-semibold">ERROR!!!</h1>
-                <p className="text-base	">Seems like Something Went Wrong while sending the email</p>
+                <h1 className="flex justify-center text-lg font-semibold">ERROR: {errorMessage}</h1>
+                <p className="text-lg	">It appears that there was an issue with your reservation process.</p>
                 <div className="w-full flex items-center justify-center">
                     <button
                         onClick={() => setError(false)}

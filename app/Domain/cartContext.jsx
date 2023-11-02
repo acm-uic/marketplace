@@ -6,27 +6,18 @@ export function CartContextProvider({ children }) {
     const [cartProducts, setCartProducts] = useState([]);
 
     const saveStateToLocalStorage = (state) => {
-        try {
-            const serializedState = JSON.stringify(state);
-            localStorage.setItem('cartState', serializedState);
-        } catch (error) {
-            console.error('Error saving cart state to local storage:', error);
-        }
+        const serializedState = JSON.stringify(state);
+        localStorage.setItem('cartState', serializedState);
     };
 
     const loadStateFromLocalStorage = () => {
-        try {
-          const serializedState = localStorage.getItem('cartState');
-          if (serializedState === null) {
+        const serializedState = localStorage.getItem('cartState');
+        if (serializedState === null) {
             return [];
-          }
-          return JSON.parse(serializedState);
-        } catch (error) {
-          console.error('Error loading cart state from local storage:', error);
-          return [];
         }
-      };
-    
+        return JSON.parse(serializedState);
+    };
+
 
     useEffect(() => {
         const loadedCartState = loadStateFromLocalStorage();
@@ -58,7 +49,9 @@ export function CartContextProvider({ children }) {
     const removeOne = (id) => {
         setCartProducts((currentItems) => {
             if (currentItems.find((item) => item.id === id)?.cartQuantity === 1) {
-                return currentItems.filter((item) => item.id !== id);
+                const arr = currentItems.filter((item) => item.id !== id)
+                saveStateToLocalStorage(arr)
+                return arr;
             } else {
                 return currentItems.map((item) => {
                     if (item.id === id) {
@@ -73,16 +66,23 @@ export function CartContextProvider({ children }) {
 
     const removeAll = (id) => {
         setCartProducts((currentItems) => {
-            return currentItems.filter((item) => item.id !== id);
+            const arr = currentItems.filter((item) => item.id !== id)
+            saveStateToLocalStorage(arr)
+            return arr;
         });
     };
 
-    const isInCart = (id)=>{
+    const isInCart = (id) => {
         return cartProducts.some((cartProduct) => cartProduct.id === id);
     }
 
+    const clearCart = () => {
+        saveStateToLocalStorage([])
+        setCartProducts([])
+    }
+
     return (
-        <CartContext.Provider value={{ cartProducts, addToCart, removeOne, removeAll,isInCart }}>
+        <CartContext.Provider value={{ cartProducts, addToCart, removeOne, removeAll, isInCart, clearCart }}>
             {children}
         </CartContext.Provider>
     );
