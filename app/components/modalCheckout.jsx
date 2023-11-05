@@ -98,6 +98,7 @@ export default function ModalCheckOut({ products, showModal, setShowModal, subTo
                                                     <div className='w-10/12 flex  flex-col items-end '>
                                                         {products && products.map((product) => {
                                                             return (
+                                                                // eslint-disable-next-line react/jsx-key
                                                                 <h1 className="w-60 text-md flex flex-row justify-end mr-1 mb-1">{product.cartQuantity}x {product.title}-${product.price}</h1>
                                                             )
                                                         })}
