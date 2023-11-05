@@ -9,8 +9,8 @@ const ContributorPage = ( {isDarkMode, productListRef}) => {
     <div ref={productListRef} style={{ background: isDarkMode?"#242526":"#FFF" }} className='min-h-screen w-full flex items-center justify-center '>
       <div className='w-[80%] h-full pt-20 '>
         <h2 style={{ color: isDarkMode?"#FFF":"#000000" }} className=' mt-[97px] font-sans underline text-[24px]'>Contributor List:</h2>
-        <div className=' mt-8 flex justify-center '>
-          <div className='grid grid-cols-3 h-[893px]  w-[1700px]'>
+        <div className=' mt-8 flex justify-center  '>
+          <div className='grid lg:grid-cols-3 grid-cols-1 sm:grid-cols-2 min-h-[893px]  w-[1700px]'>
             <AdrianKnight/>
             <Andre />
             <SamuelE/>

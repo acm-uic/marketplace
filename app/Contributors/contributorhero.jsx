@@ -11,16 +11,17 @@ export default function ContributorHeroScreen( {scrollToProductList, isDarkMode}
     }
   }
   
+  
   return (
     <div style={{ background: isDarkMode?"linear-gradient(180deg, #D90000 91.67%, #262425 100%)":"#34A3D9"}} className="flex flex-col items-center  h-screen bg-cover bg-center w-full">
       <div className="flex flex-col items-center  h-[750px] bg-cover bg-center w-full justify-center">
-      <h1 className="text-white text-9xl max-w-[960px]  font-extrabold mb-8 mt-48 text-shadow-hero overflow-hidden whitespace-nowrap shadow-HEROSHADOW animate-typewriter border-r-[.15em] blinkTextCursor" onAnimationEnd={AnimationEnd}>Website Credit</h1>
+      <h1 className="text-white lg:text-9xl max-w-[960px]  font-extrabold mb-8 mt-48 text-shadow-hero lg:overflow-hidden whitespace-nowrap shadow-HEROSHADOW lg:animate-typewriter text-5xl text-center border-r-[.15em] blinkTextCursor" onAnimationEnd={AnimationEnd}>Website Credit</h1>
       <button style={{ color: isDarkMode ? '#D90000' : '#34A3D9' }} className="bg-white px-5 py-6 rounded-full " onClick={scrollToProductList}>
         <a className={`text-center font-bold text-4xl text-shadow-hero shadow-SHOPTEXTSHADOW mb-[50px]`}>READ MORE</a>
       </button>
       </div>
-      <div className="items-center flex flex-row bg-transparent w-full justify-center">
-        <span className="w-60 block bg-white h-[1px] "></span> 
+      <div className="items-center flex flex-row bg-transparent w-full justify-center lg:mb-20 mb-[30%]">
+        <span className="lg:w-60 block bg-white h-[1px] "></span> 
         <Link href="https://discord.gg/Afy6gf4" target="_blank">
           <div  className="ml-[30px] w-[40px] h-[40px] hover:animate-spin">
           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 50 50">
@@ -61,7 +62,7 @@ export default function ContributorHeroScreen( {scrollToProductList, isDarkMode}
           </div>
         </Link>
 
-        <span className="ml-[30px] w-60 block bg-white h-[1px]"></span>
+        <span className="ml-[30px] lg:w-60 block bg-white h-[1px] lg:mb-0"></span>
       </div>
     </div>
     
