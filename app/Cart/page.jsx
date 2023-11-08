@@ -4,7 +4,6 @@ import CartProduct from '../components/cartProduct';
 import { useTheme } from "../Domain/ThemeContext";
 import { useState, useEffect } from 'react';
 import ModalCheckOut from '../components/modalCheckout';
-import { handleEnter, handleLeave } from '../components/animationFunction';
 import { useCartProducts } from '../Domain/cartContext'
 import Image from 'next/image';
 import emptyCart from '../images/empty-cart.png'
@@ -37,8 +36,8 @@ export default function CartPage() {
                             <Image src={emptyCart} width={100} height={100}  alt='Empty Cart Image'/>
                         </div>
                         <h1 className='text-3xl font-bold mb-2'>Your Cart is currently empty</h1>
-                        <p className='text-lg'>Looks Like you havent add anything to your cart yet</p>
-                        <Link onMouseEnter={(e) => handleEnter(e)} onMouseLeave={(e) => handleLeave(e)} href='/' className='mt-8 bg-ACMDARK w-44 h-10 flex items-center justify-center rounded-lg duration-200 transition-all ease-out'>Continue Shopping</Link>
+                        <p className='text-lg'>Looks Like you haven't add anything to your cart yet</p>
+                        <Link href='/' className=' hover:scale-110 mt-8 bg-ACMDARK w-44 h-10 flex items-center justify-center rounded-lg duration-200 transition-all ease-out'>Continue Shopping</Link>
                     </div>
                     : <>
                         <div>
@@ -55,9 +54,7 @@ export default function CartPage() {
                             </div>
                             <button
                                 onClick={() => setShowModal(true)}
-                                onMouseLeave={(e) => handleLeave(e)}
-                                onMouseEnter={(e) => handleEnter(e)}
-                                className='text-lg duration-200 mb-10 transition-all ease-out bg-ACMDARK w-60 h-10 pt-1 pb-1 rounded-lg text-white' >
+                                className='hover:scale-110 text-lg duration-200 mb-10 transition-all ease-out bg-ACMDARK w-60 h-10 pt-1 pb-1 rounded-lg text-white' >
                                 Checkout
                             </button>
                         </div>

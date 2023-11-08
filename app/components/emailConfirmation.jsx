@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useCartProducts } from "../Domain/cartContext";
 import emailImg from '../images/email.png'
 import Image from "next/image";
-import { handleEnter, handleLeave } from "./animationFunction";
 
 export default function EmailSent({ id, setEmailSent, setError, setLoading, setErrorMessage, setSuccess }) {
   const { clearCart } = useCartProducts()
@@ -103,16 +102,13 @@ export default function EmailSent({ id, setEmailSent, setError, setLoading, setE
         <div className="w-full flex items-center justify-evenly">
           <button
             onClick={handleCancel}
-            onMouseLeave={(e) => handleLeave(e)}
-            onMouseEnter={(e) => handleEnter(e)}
-            className="duration-200 transition-all ease-out border-2 w-2/6 border-black border-solid hover:bg-ACMPrimary px-4 py-1 rounded-lg text-md font-medium mb-4 cursor-pointer">
+            className=" hover:scale-110 duration-200 transition-all ease-out border-2 w-2/6 border-black border-solid hover:bg-ACMPrimary px-4 py-1 rounded-lg text-md font-medium mb-4 cursor-pointer">
             Cancel
           </button>
           <button
-            className="duration-200 transition-all ease-out border-2 w-2/6 bg-ACMDARK text-white px-4 py-1 rounded-lg text-md font-medium mb-4 cursor-pointer "
+            className=" hover:scale-110  duration-200 transition-all ease-out border-2 w-2/6 bg-ACMDARK text-white px-4 py-1 rounded-lg text-md font-medium mb-4 cursor-pointer "
             onClick={() => handleClick()}
-            onMouseLeave={(e) => handleLeave(e)}
-            onMouseEnter={(e) => handleEnter(e)}>
+          >
             Submit
           </button>
         </div>

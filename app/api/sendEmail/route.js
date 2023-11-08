@@ -28,11 +28,16 @@ export async function POST(request) {
     }
 
     let cartItemsHtml = '';
+    let outOfStock = []
     for (const item of cart) {
         if (item.cartQuantity > item.quantity) {
-            return NextResponse.json('Out of stock', { status: 500 });
+            outOfStock.push(item.title)
         }
         cartItemsHtml += `<li>${item.cartQuantity}-${item.title}</li>`;
+    }
+
+    if(outOfStock.length > 0 ){
+        return NextResponse.json(`Items '${outOfStock.join(', ')}' Out of stock `,{ status: 500 });
     }
 
     const code = generateConfirmationCode();
@@ -61,6 +66,7 @@ export async function POST(request) {
         });
 
         const purchaseId = purchase.id;
+
 
         const transporter = nodemailer.createTransport({
             host: process.env.SMTP_Host,
