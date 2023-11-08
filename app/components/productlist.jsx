@@ -4,11 +4,12 @@ import Product from "./product";
 import ProductFilter from "./productFilter";
 import { useProducts } from "../Domain/ProductContext";
 import pb from "../Domain/pocketbase";
+import {useState} from "react";
 
 export default function ProductList({productList, isDarkMode }) {
-  // const {products} = useProducts();
-  // console.log(products);
-  var [page, setPage] = useState("Category 1");
+  const {products} = useProducts();
+  console.log(products);
+  var [page, setPage] = useState("All");
 
   return (
     <div
@@ -16,16 +17,24 @@ export default function ProductList({productList, isDarkMode }) {
       className={` ${isDarkMode? 'bg-ACMDARK': "bg-white"} text-white flex flex-col items-center  justify-center min-h-screen bg-cover bg-center w-full`} >
       <h1 className={`text-4xl bold ${isDarkMode? 'text-white' : 'text-ACMDARK'}`}  >Products</h1>
       <div className="flex flex-col items-center justify-center	mt-14">
-      <ProductFilter page={page} setPage={setPage} isDarkMode={isDarkMode}/>
+        <ProductFilter page={page} setPage={setPage} isDarkMode={isDarkMode}/>
         <div className="flex items-start content-start gap-x-16 gap-y-7 shrink-0 flex-wrap max-w-6xl mb-10 mt-10">
           {products.map((product) => {
             let imgUrl = pb.files.getUrl(product, product.img)
             console.log(imgUrl);
-            return (
-              <div key={product.id}>
-                <Product isDarkMode={isDarkMode} id={product.id} price={product.price} title={product.title} imgUrl={imgUrl} />
-              </div>
-            )
+            if (page == "All") {
+              return (
+                <div key={product.id}>
+                  <Product isDarkMode={isDarkMode} id={product.id} price={product.price} title={product.title} imgUrl={imgUrl} />
+                </div>
+              )
+            }
+            else if (product.tag == page) {
+              return (
+                <div key={product.id}>
+                  <Product isDarkMode={isDarkMode} id={product.id} price={product.price} title={product.title} imgUrl={imgUrl} />
+                </div>
+              )}
           })}
         </div>
       </div>

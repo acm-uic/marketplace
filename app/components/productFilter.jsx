@@ -7,15 +7,14 @@ export default function ProductFilter({page,setPage,isDarkMode}){
     return(
         <div>
             <div className={`${isDarkMode? 'text-white': 'text-black'} flex flex-row text-[25px]`}>
-            <button className="pr-8 hover:text-yellow-500"
-                    onClick={() => setPage( page = "Category 1")}>Category 1</button>
-            <button className="hover:text-yellow-500"
-                    onClick={() => setPage( page = "Category 2")}>Category 2</button>
-            <button className="pl-8 hover:text-yellow-500"
-                    onClick={() => setPage( page = "Category 3")}>Category 3</button>
-            </div>
-            <div>
-                {page}
+            <button className={`${(page == "All")? 'text-yellow-500' : 'text-white'} pr-16 hover:text-yellow-500`} 
+                    onClick={() => setPage( page = "All")}>All</button>
+            <button className={`${(page == "Clothes")? 'text-yellow-500' : 'text-white'} pr-16 hover:text-yellow-500`}
+                    onClick={() => setPage( page = "Clothes")}>Clothes</button>
+            <button className={`${(page == "Pen")? 'text-yellow-500' : 'text-white'} hover:text-yellow-500`}
+                    onClick={() => setPage( page = "Pen")}>Pen</button>
+            <button className={`${(page == "Technology")? 'text-yellow-500' : 'text-white'} pl-16 hover:text-yellow-500`}
+                    onClick={() => setPage( page = "Technology")}>Technology</button>
             </div>
         </div>
         
