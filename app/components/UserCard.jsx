@@ -14,7 +14,7 @@ export const AdrianKnight = ( ) => {
   return (
     <div>
       <div className="flex justify-center align-middle bg-white shadow-contributor max-w-[380px] h-[100px] m-5 border-solid border-2 border-black" >
-        <Image className="rounded-[50%] border-indigo-600 border-[4px] -translate-x-[20%] -translate-y-4 hover:animate-ping delay-1000" src={profilePicAdrian} width={100} height={100} alt="profile picture of Adrian Knight" />
+        <Image alt="profile picture of Adrian Knight" className="rounded-[50%] border-indigo-600 border-[4px] -translate-x-[20%] -translate-y-4 hover:animate-ping delay-1000" src={profilePicAdrian} width={100} height={100} />
         <div className="text-black text-center w-full self-center mr-5">
           <h3 className="text-2xl  ">
             Adrian Knight
@@ -32,7 +32,7 @@ export const Andre = () => {
   return (
     <div>
       <div className="flex justify-center align-middle bg-white shadow-contributor max-w-[380px] h-[100px] m-5 border-solid border-2 border-black" >
-        <Image className="rounded-[50%] border-yellow-500 border-[4px] -translate-x-[20%] -translate-y-4" src={profilePicAndre} width={100} height={100} alt="" />
+        <Image alt="profile picture of Andre Rimes" className="rounded-[50%] border-yellow-500 border-[4px] -translate-x-[20%] -translate-y-4" src={profilePicAndre} width={100} height={100} />
         <div className="text-black text-center w-full self-center mr-5">
           <h3 className="text-2xl">
           Andre Rimes
@@ -50,7 +50,7 @@ export const SamuelE = () => {
   return (
     <div>
       <div className="flex justify-center align-middle bg-white shadow-contributor max-w-[380px] h-[100px] m-5 border-solid border-2 border-black">
-        <Image className="rounded-[50%] border-sky-900 border-[4px] -translate-x-[20%] -translate-y-4" src={anotherProfile} width={100} height={100} alt="" />
+        <Image alt="profile picture of Samuel E" className="rounded-[50%] border-sky-900 border-[4px] -translate-x-[20%] -translate-y-4" src={anotherProfile} width={100} height={100}/>
         <div className="text-black text-center w-full self-center mr-5">
           <h3 className="text-2xl">
           Samuel E
@@ -68,7 +68,7 @@ export const Sklimas101 = () => {
   return (
     <div>
       <div className="flex justify-center align-middle bg-white shadow-contributor max-w-[380px] h-[100px] m-5 border-solid border-2 border-black">
-        <Image className="rounded-[50%] border-sky-600 border-[4px] -translate-x-[20%] -translate-y-4" src={profilePicShane} width={100} height={100} alt="" />
+        <Image alt="profile picture of Shane K" className="rounded-[50%] border-sky-600 border-[4px] -translate-x-[20%] -translate-y-4" src={profilePicShane} width={100} height={100}/>
         <div className="text-black text-center w-full self-center mr-5">
           <h3 className="text-2xl">
           Shane K
@@ -87,7 +87,7 @@ export const SrijanS = () => {
   return (
     <div>
       <div className="flex justify-center align-middle bg-white shadow-contributor max-w-[380px] h-[100px] m-5 border-solid border-2 border-black">
-        <Image className="rounded-[50%] border-cyan-400 border-[4px] -translate-x-[20%] -translate-y-4" src={profilePicSrijan} width={100} height={100} alt="" />
+        <Image alt="profile picture of Srijan Suresh" className="rounded-[50%] border-cyan-400 border-[4px] -translate-x-[20%] -translate-y-4" src={profilePicSrijan} width={100} height={100} />
         <div className="text-black text-center w-full self-center mr-5">
           <h3 className="text-2xl">
           Srijan Suresh
@@ -105,7 +105,7 @@ export const ZiJunW = () => {
   return (
     <div>
       <div className="flex justify-center align-middle bg-white shadow-contributor max-w-[380px] h-[100px] m-5 border-solid border-2 border-black">
-        <Image className="rounded-[50%] border-orange-900 border-[4px] -translate-x-[20%] -translate-y-4" src={profileZiJunW} width={100} height={100} alt="" />
+        <Image alt="profile picture of Zi Jun Wang" className="rounded-[50%] border-orange-900 border-[4px] -translate-x-[20%] -translate-y-4" src={profileZiJunW} width={100} height={100}/>
         <div className="text-black text-center w-full self-center mr-5">
           <h3 className="text-2xl">
           Zi Jun Wang
@@ -123,7 +123,7 @@ export const Shanmukhche = () => {
   return (
     <div>
       <div className="flex justify-center align-middle bg-white shadow-contributor max-w-[380px] h-[100px] m-5 border-solid border-2 border-black">
-        <Image className="rounded-[50%] border-green-500 border-[4px] -translate-x-[20%] -translate-y-4" src={profilePicShanmukh} width={100} height={100} alt="" />
+        <Image alt="profile picture of Shanmukh Chebrolu" className="rounded-[50%] border-green-500 border-[4px] -translate-x-[20%] -translate-y-4" src={profilePicShanmukh} width={100} height={100} />
         <div className="text-black text-center w-full self-center mr-5">
           <h3 className="text-2xl">
           Shanmukh Chebrolu
@@ -141,7 +141,7 @@ export const Manh_Phan = () => {
   return (
     <div>
       <div className="flex justify-center align-middle bg-white shadow-contributor max-w-[380px] h-[100px] m-5 border-solid border-2 border-black">
-        <Image className="rounded-[50%] border-zinc-700 border-[4px] -translate-x-[20%] -translate-y-4" src={profilePicManh} width={100} height={100} alt="" />
+        <Image alt="profile picture of Manh Phan" className="rounded-[50%] border-zinc-700 border-[4px] -translate-x-[20%] -translate-y-4" src={profilePicManh} width={100} height={100}/>
         <div className="text-black text-center w-full self-center mr-5">
           <h3 className="text-2xl">
           Manh Phan
@@ -159,7 +159,7 @@ export const SathvikL = () => {
   return (
     <div>
       <div className="flex justify-center align-middle bg-white shadow-contributor max-w-[380px] h-[100px] m-5 border-solid border-2 border-black">
-        <Image className="rounded-[50%] border-green-500 border-[4px] -translate-x-[20%] -translate-y-4" src={profilePicShanmukh} width={100} height={100} alt="" />
+        <Image alt="profile picture of Sathvik Ram Lanka" className="rounded-[50%] border-green-500 border-[4px] -translate-x-[20%] -translate-y-4" src={profilePicShanmukh} width={100} height={100}/>
         <div className="text-black text-center w-full self-center mr-5">
           <h3 className="text-2xl">
           Sathvik Ram Lanka
