@@ -36,7 +36,7 @@ export default function CartPage() {
                             <Image src={emptyCart} width={100} height={100}  alt='Empty Cart Image'/>
                         </div>
                         <h1 className='text-3xl font-bold mb-2'>Your Cart is currently empty</h1>
-                        <p className='text-lg'>Looks Like you haven't add anything to your cart yet</p>
+                        <p className='text-lg'>Looks Like you haven&apos;t add anything to your cart yet</p>
                         <Link href='/' className=' hover:scale-110 mt-8 bg-ACMDARK w-44 h-10 flex items-center justify-center rounded-lg duration-200 transition-all ease-out'>Continue Shopping</Link>
                     </div>
                     : <>
