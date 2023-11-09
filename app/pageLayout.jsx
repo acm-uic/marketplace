@@ -1,11 +1,14 @@
 "use client"
 import React from 'react';
 import { ThemeProvider } from './Domain/ThemeContext';
+import { CartContextProvider } from './Domain/cartContext';
 
-export default function PageLayout({children}){
-  return(
+export default function PageLayout({ children }) {
+  return (
     <ThemeProvider>
-      {children}
+      <CartContextProvider>
+        {children}
+      </CartContextProvider>
     </ThemeProvider>
   )
 }

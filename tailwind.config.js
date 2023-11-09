@@ -27,8 +27,22 @@ module.exports = {
       },
       animation:{
         typewriter: 'typewriter 2s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) 5 normal',
+        dropTop: 'dropTop 0.2s ease-in',
+        slideIn: 'slideIn 0.3s ease-out',
+        loading: 'loading 2s infinite ease-in-out'
       },
       keyframes:{
+        dropTop:{
+            '0%': {transform: 'translate(50%,50%)', opacity:'0',scale:'0.5' },
+            '100%': {transform:'translate(0%,0%)',opacity:'1',scale:'1'}
+        },
+        slideIn:{
+          '0%':{transform:'skewX(53deg) translateX(500px)',opacity:'0'},
+          '100%':{transform:'skewX(0deg)', opacity:'1'}
+        },
+        loading:{
+          '50%':{opacity:'0',scale:'0.7',transform:'translateY(10px)'}
+        },
         typewriter: {
           from: {
             width: '0',

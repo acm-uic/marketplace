@@ -8,7 +8,6 @@ import {useState} from "react";
 
 export default function ProductList({productList, isDarkMode }) {
   const {products} = useProducts();
-  console.log(products);
   var [page, setPage] = useState("All");
 
   return (
@@ -21,18 +20,17 @@ export default function ProductList({productList, isDarkMode }) {
         <div className="flex items-start content-start gap-x-16 gap-y-7 shrink-0 flex-wrap max-w-6xl mb-10 mt-10">
           {products.map((product) => {
             let imgUrl = pb.files.getUrl(product, product.img)
-            console.log(imgUrl);
             if (page == "All") {
               return (
                 <div key={product.id}>
-                  <Product isDarkMode={isDarkMode} id={product.id} price={product.price} title={product.title} imgUrl={imgUrl} />
+                  <Product isDarkMode={isDarkMode} product={product}/>
                 </div>
               )
             }
             else if (product.tag == page) {
               return (
                 <div key={product.id}>
-                  <Product isDarkMode={isDarkMode} id={product.id} price={product.price} title={product.title} imgUrl={imgUrl} />
+                  <Product isDarkMode={isDarkMode} product={product}/>
                 </div>
               )}
           })}
