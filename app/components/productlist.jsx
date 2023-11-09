@@ -7,7 +7,6 @@ import pb from "../Domain/pocketbase";
 
 export default function ProductList({productList, isDarkMode }) {
   const {products} = useProducts();
-  console.log(products);
   return (
     <div
       ref={productList} 
@@ -21,7 +20,7 @@ export default function ProductList({productList, isDarkMode }) {
             console.log(imgUrl);
             return (
               <div key={product.id}>
-                <Product isDarkMode={isDarkMode} id={product.id} price={product.price} title={product.title} imgUrl={imgUrl} />
+                <Product isDarkMode={isDarkMode} product={product}/>
               </div>
             )
           })}

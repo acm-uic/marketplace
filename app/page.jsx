@@ -4,7 +4,6 @@ import HeroScreen from "./components/hero"
 import ProductList from "./components/productlist";
 import { useState, useRef, useEffect } from "react";
 import { useTheme } from "./Domain/ThemeContext";
-import {listOfProduct} from './testData/produts';
 
 
 import { ProductProvider } from "./Domain/ProductContext";
@@ -27,7 +26,6 @@ export default function Home() {
       <ProductProvider>
         <ProductList productList={productList} isDarkMode={isDarkMode} />
       </ProductProvider>
-      
     </div>
 
   );

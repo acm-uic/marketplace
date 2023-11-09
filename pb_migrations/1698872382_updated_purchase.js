@@ -1,0 +1,30 @@
+/// <reference path="../pb_data/types.d.ts" />
+migrate((db) => {
+  const dao = new Dao(db)
+  const collection = dao.findCollectionByNameOrId("yyqtjf20nw7vje3")
+
+  // add
+  collection.schema.addField(new SchemaField({
+    "system": false,
+    "id": "mvqp2crj",
+    "name": "expirationDate",
+    "type": "date",
+    "required": false,
+    "presentable": false,
+    "unique": false,
+    "options": {
+      "min": "",
+      "max": ""
+    }
+  }))
+
+  return dao.saveCollection(collection)
+}, (db) => {
+  const dao = new Dao(db)
+  const collection = dao.findCollectionByNameOrId("yyqtjf20nw7vje3")
+
+  // remove
+  collection.schema.removeField("mvqp2crj")
+
+  return dao.saveCollection(collection)
+})
