@@ -48,7 +48,7 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        <div className=" mr-8 mt-3 font-bold text-lg">
+        <div className=" lg:mr-8 mr-2 mt-3 font-bold lg:text-lg text-xs">
             <Link href="/Contributors">
               Website Credit & Contributors
             </Link>
