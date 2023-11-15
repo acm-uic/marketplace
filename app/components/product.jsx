@@ -4,13 +4,14 @@ import Link from "next/link";
 import cartNotFull from '../images/cartNotFull.png'
 import cartFull from '../images/cartFull.png'
 import { useCartProducts } from "../Domain/cartContext";
+import pb from "../Domain/pocketbase";
 
 
 export default function Product({ product, isDarkMode }) {
   const [hovered, setHovered] = useState(false);
-  const { id, title, price, imgUrl } = product
+  const { id, title, price } = product
   const { cartProducts, removeAll, addToCart,isInCart } = useCartProducts();
-
+  let imgUrl = pb.files.getUrl(product, product.img)
   function handleClick(e, product) {
     e.preventDefault();
     if (isInCart(id)) {

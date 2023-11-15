@@ -2,10 +2,12 @@
 import Link from "next/link";
 import Image from "next/image"
 import { useCartProducts } from '../Domain/cartContext'
-
+import pb from "../Domain/pocketbase";
 export default function CartProduct({ product }) {
     const { addToCart, removeOne, removeAll } = useCartProducts()
-    const { id, tags, title, price, imgUrl, properties, cartQuantity } = product
+    const { id, tags, title, price, properties, cartQuantity } = product
+    let imgUrl = pb.files.getUrl(product, product.img)
+    
     function handleEnter(e) {
         e.target.style.transform = 'scale(1.1)';
 

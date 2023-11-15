@@ -3,7 +3,6 @@ import React from "react";
 import Product from "./product";
 import ProductFilter from "./productFilter";
 import { useProducts } from "../Domain/ProductContext";
-import pb from "../Domain/pocketbase";
 import {useState} from "react";
 
 export default function ProductList({productList, isDarkMode }) {
@@ -19,7 +18,6 @@ export default function ProductList({productList, isDarkMode }) {
         <ProductFilter page={page} setPage={setPage} isDarkMode={isDarkMode}/>
         <div className="flex items-start content-start gap-x-16 gap-y-7 shrink-0 flex-wrap max-w-6xl mb-10 mt-10">
           {products.map((product) => {
-            let imgUrl = pb.files.getUrl(product, product.img)
             if (page == "All") {
               return (
                 <div key={product.id}>
