@@ -30,7 +30,7 @@ export default function Header() {
                     <Link className="text-2xl mr-10 text-white hover:underline" href="https://acm.uic.edu/about" target="_blank">About</Link>
                     <Link className="text-2xl text-white hover:underline w" href='https://acm.uic.edu/contact' target="_blank">Contact</Link>
                 </div>
-                <div className="mt-4 mg:ml-0 ml-[5%]">
+                <div className="mt-4 md:ml-0 ml-[5%]">
                     <Link href="https://acm.uic.edu/" target="_blank">
                         <Image src={logo} alt="ACM Logo" width={100} height={64} />
                     </Link>
