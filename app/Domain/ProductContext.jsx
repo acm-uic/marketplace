@@ -1,6 +1,6 @@
 import getProducts from './getProducts';
 import React, { createContext, useContext, useState, useEffect } from 'react';
-
+import pb from './pocketbase'
 const ProductContext = createContext();
 
 export const ProductProvider = ({ children }) => {
@@ -16,8 +16,14 @@ export const ProductProvider = ({ children }) => {
     fetchProducts();
   }, []);
 
+
+  function getURL(product) {
+    return pb.files.getUrl(product, product?.img);
+  }
+  
+
   return (
-    <ProductContext.Provider value={{ products }}>
+    <ProductContext.Provider value={{ products, getURL}}>
       {children}
     </ProductContext.Provider>
   );

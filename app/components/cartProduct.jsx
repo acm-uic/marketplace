@@ -33,16 +33,15 @@ export default function CartProduct({ product }) {
             <div className="h-5/6 flex flex-col">
                 <div className="flex flex-row font-bold mb-10">
                     <h2 className="text-2xl mr-14">${price}</h2>
-                    <h2 onClick={() => removeAll(id)} onMouseLeave={(e) => handleLeave(e)} onMouseEnter={(e) => handleEnter(e)} className="text-2xl duration-200	transition-all ease-in cursor-pointer">X</h2>
+                    <h2 onClick={() => removeAll(id)} onMouseLeave={(e) => handleLeave(e)} onMouseEnter={(e) => handleEnter(e)} className="text-2xl duration-200 transition-all ease-in cursor-pointer">X</h2>
                 </div>
 
                 <div className="grid grid-cols-3 divide-x text-align text-lg " >
                     <div onClick={() => removeOne(id)} onMouseLeave={(e) => handleLeave(e)} onMouseEnter={(e) => handleEnter(e)} style={{ border: '1px solid black' }} className=" duration-200	transition-all ease-in flex items-center justify-center rounded-tl-lg rounded-bl-lg cursor-pointer font-bold">-</div>
                     <div style={{ border: '1px solid black' }} className=" flex items-center justify-center font-bold">{cartQuantity}</div>
-                    <div onClick={() => addToCart(product)} onMouseLeave={(e) => handleLeave(e)} onMouseEnter={(e) => handleEnter(e)} style={{ border: '1px solid black' }} className=" duration-200	transition-all ease-in flex items-center justify-center rounded-tr-lg rounded-br-lg font-bold cursor-pointer">+</div>
+                    <div onClick={() => addToCart(product,1)} onMouseLeave={(e) => handleLeave(e)} onMouseEnter={(e) => handleEnter(e)} style={{ border: '1px solid black' }} className=" duration-200	transition-all ease-in flex items-center justify-center rounded-tr-lg rounded-br-lg font-bold cursor-pointer">+</div>
                 </div>
             </div>
-
         </div >
     )
 
