@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useCartProducts } from "../Domain/cartContext";
 import { useRouter } from "next/navigation";
 
-export default function ProductDescription({product ,title, description, quantity, price }) {
+export default function ProductDescription({product ,title, description, quantity, price,setShowNotification }) {
   const { addToCart } = useCartProducts();
   const [selectedQuantity, setSelectedQuantity] = useState(0);
   const router = useRouter();
@@ -23,6 +23,7 @@ export default function ProductDescription({product ,title, description, quantit
 
   function handleAddToCart() {
     addToCart(product,selectedQuantity)
+    setShowNotification(true)
   }
   
 
@@ -32,8 +33,8 @@ export default function ProductDescription({product ,title, description, quantit
   }
 
   return (
-    <div className="flex w-[55%] h-[65%] flex-col items-center justify-evenly">
-      <div className="w-7/12 h-4/6 bg-white flex flex-col items-center justify-center rounded-lg">
+    <div className="flex w-[55%] h-[65%] flex-col items-center justify-evenly ">
+      <div className="w-7/12 h-4/6 bg-white flex flex-col items-center justify-center rounded-lg ">
         <div className="w-11/12 h-10">
           <h1 className="text-2xl font-bold">{title}</h1>
         </div>
@@ -41,7 +42,7 @@ export default function ProductDescription({product ,title, description, quantit
         <div className="w-11/12 h-8">
           <h2 className="text-xl font-bold">${price}</h2>
         </div>
-        <p className="w-11/12 max-h-56 overflow-hidden">{description}</p>
+        <p className="w-11/12 h-56 max-h-56 overflow-hidden py-2">{description}</p>
       </div>
       <div className="w-7/12 flex flex-row items-center justify-between text-lg font-semibold ">
         <button
@@ -52,7 +53,7 @@ export default function ProductDescription({product ,title, description, quantit
         </button>
         <select
           name="Qty: "
-          className="w-1/3 h-10 rounded-lg bg-ACMDARK text-white border-none px-2"
+          className="w-1/3 h-10 rounded-lg bg-ACMDARK text-white border-none px-2 cursor-pointer"
           onChange={(e) => setSelectedQuantity(parseInt(e.target.value))}
         >
           {quantityOptions}

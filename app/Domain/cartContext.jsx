@@ -4,6 +4,7 @@ const CartContext = createContext();
 
 export function CartContextProvider({ children }) {
     const [cartProducts, setCartProducts] = useState([]);
+    const [cartLoading , setCarLoading] = useState(true)
 
     const saveStateToLocalStorage = (state) => {
         const serializedState = JSON.stringify(state);
@@ -22,6 +23,7 @@ export function CartContextProvider({ children }) {
     useEffect(() => {
         const loadedCartState = loadStateFromLocalStorage();
         setCartProducts(loadedCartState);
+        setCarLoading(false)
     }, []);
 
     useEffect(() => {
@@ -82,7 +84,7 @@ export function CartContextProvider({ children }) {
     }
 
     return (
-        <CartContext.Provider value={{ cartProducts, addToCart, removeOne, removeAll, isInCart, clearCart}}>
+        <CartContext.Provider value={{ cartProducts, addToCart, removeOne, removeAll, isInCart, clearCart,cartLoading}}>
             {children}
         </CartContext.Provider>
     );

@@ -30,7 +30,7 @@ export default function CartProduct({ product }) {
                 ))}
             </div>
 
-            <div className="h-5/6 flex flex-col">
+            <div className="h-5/6 flex flex-col 2xl:mr-0 mr-10">
                 <div className="flex flex-row font-bold mb-10">
                     <h2 className="text-2xl mr-14">${price}</h2>
                     <h2 onClick={() => removeAll(id)} onMouseLeave={(e) => handleLeave(e)} onMouseEnter={(e) => handleEnter(e)} className="text-2xl duration-200 transition-all ease-in cursor-pointer">X</h2>
