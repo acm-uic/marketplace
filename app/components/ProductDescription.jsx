@@ -1,19 +1,13 @@
-import { useState } from "react";
 import { useCartProducts } from "../Domain/cartContext";
 import { useRouter } from "next/navigation";
 
-export default function ProductDescription({product ,title, description, quantity, price,setShowNotification }) {
+export default function ProductDescription({product ,title, description, quantity, price,setShowNotification,setSelectedQuantity,selectedQuantity }) {
   const { addToCart } = useCartProducts();
-  const [selectedQuantity, setSelectedQuantity] = useState(0);
   const router = useRouter();
 
-  const quantityOptions = [
-    <option key={0} value={0}>
-      Qty: 1
-    </option>
-  ];
-
+  const quantityOptions = [];
   for (let i = 1; i <= quantity; i++) {
+    {console.log(i)}
     quantityOptions.push(
       <option key={i} value={i}>
         Qty: {i}
@@ -56,11 +50,12 @@ export default function ProductDescription({product ,title, description, quantit
           className="w-1/3 h-10 rounded-lg bg-ACMDARK text-white border-none px-2 cursor-pointer"
           onChange={(e) => setSelectedQuantity(parseInt(e.target.value))}
         >
+          {console.log(quantityOptions)}
           {quantityOptions}
         </select>
       </div>
       <button onClick={()=>handleBuy()} className="w-7/12 h-10 text-xl font-semibold rounded-xl bg-ACMDARK text-white hover:scale-110 transition-all duration-300 ease-out ">
-        Buy
+        Buy Now
       </button>
     </div>
   );

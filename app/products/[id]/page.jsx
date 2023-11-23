@@ -11,6 +11,7 @@ export default function Product({ params }) {
     const { products, getURL } = useProducts();
     const [product, setProduct] = useState({})
     const [showNotification,setShowNotification] = useState(false)
+    const [selectedQuantity, setSelectedQuantity] = useState(1);
 
 
     useEffect(() => {
@@ -22,10 +23,10 @@ export default function Product({ params }) {
     return (
         <>
             <div className={`${isDarkMode ? 'bg-ACMPrimary' : 'bg-ACMBLUE'} flex flex-row items-center justify-center text-ACMDARK h-screen bg-cover bg-center w-full`}>
-                {showNotification && <Notification setShowNotification={setShowNotification}/>}
+                {showNotification && <Notification title={product?.title} selectedQuantity={selectedQuantity} setShowNotification={setShowNotification}/>}
                 <div className="w-full h-full flex flex-row items-center justify-center mt-28">
                 <Image src={getURL(product)} width={400} height={400} alt={`${product?.title} Image`} />
-                <ProductDescription  setShowNotification={setShowNotification} product={product} title={product?.title} price={product?.price} quantity={product?.quantity} description={product?.description} />
+                <ProductDescription selectedQuantity={selectedQuantity} setSelectedQuantity={setSelectedQuantity}  setShowNotification={setShowNotification} product={product} title={product?.title} price={product?.price} quantity={product?.quantity} description={product?.description} />
                 </div>
             </div>
           
