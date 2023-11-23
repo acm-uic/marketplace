@@ -6,26 +6,23 @@ import { useState, useRef, useEffect } from "react";
 import { useTheme } from "./Domain/ThemeContext";
 
 
-import { ProductProvider } from "./Domain/ProductContext";
 
 export default function Home() {
   const { isDarkMode } = useTheme();
   const productListRef = useRef([]);
   const [productList, setProductList] = useState([])
 
-  
+
 
   const scrollToProductList = () => { //Scroll \\\\
     productList.current.scrollIntoView({ behavior: "smooth" });
   };
-  
 
-  return ( 
+
+  return (
     <div className="w-full h-full text-white" >
-      <HeroScreen scrollToProductList={scrollToProductList} isDarkMode={isDarkMode}/>
-      <ProductProvider>
-        <ProductList productList={productList} isDarkMode={isDarkMode} />
-      </ProductProvider>
+      <HeroScreen scrollToProductList={scrollToProductList} isDarkMode={isDarkMode} />
+      <ProductList productList={productList} isDarkMode={isDarkMode} />
     </div>
 
   );
