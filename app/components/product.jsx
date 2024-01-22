@@ -4,23 +4,23 @@ import Link from "next/link";
 import cartNotFull from '../images/cartNotFull.png'
 import cartFull from '../images/cartFull.png'
 import { useCartProducts } from "../Domain/cartContext";
-import pb from "../Domain/pocketbase";
-
+import { useProducts } from "../Domain/ProductContext";
 
 export default function Product({ product, isDarkMode }) {
   const [hovered, setHovered] = useState(false);
   const { id, title, price } = product
-  const { cartProducts, removeAll, addToCart, isInCart } = useCartProducts();
-  let imgUrl = pb.files.getUrl(product, product.img)
+  const {removeAll, addToCart, isInCart } = useCartProducts();
+  const { getURL } = useProducts();
+  let imgUrl = getURL(product)
+
   function handleClick(e, product) {
     e.preventDefault();
     if (isInCart(id)) {
       removeAll(id);
     } else {
-      addToCart(product);
+      addToCart(product,1);
     }
   }
-
 
   return (
     <Link href={`products/${id}`}>
