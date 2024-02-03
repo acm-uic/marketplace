@@ -9,7 +9,6 @@ export const ProductProvider = ({ children }) => {
   useEffect(() => {
     const fetchProducts = async () => {
       const data = await getProducts();
-      console.log("Products: " + data);
       setProducts(data);
     };
 
@@ -17,8 +16,8 @@ export const ProductProvider = ({ children }) => {
   }, []);
 
 
-  function getURL(product) {
-    return pb.files.getUrl(product, product?.img);
+  function getURL(product,index) {
+    return pb.files.getUrl(product, product?.img?.[index]);
   }
   
 
