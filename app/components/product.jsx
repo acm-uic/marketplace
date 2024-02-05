@@ -9,16 +9,16 @@ import { useProducts } from "../Domain/ProductContext";
 export default function Product({ product, isDarkMode }) {
   const [hovered, setHovered] = useState(false);
   const { id, title, price } = product
-  const {removeAll, addToCart, isInCart } = useCartProducts();
+  const { removeAll, addToCart, isInCart } = useCartProducts();
   const { getURL } = useProducts();
-  let imgUrl = getURL(product)
+  let imgUrl = getURL(product, 0)
 
   function handleClick(e, product) {
     e.preventDefault();
     if (isInCart(id)) {
       removeAll(id);
     } else {
-      addToCart(product,1);
+      addToCart(product, 1);
     }
   }
 
@@ -36,7 +36,7 @@ export default function Product({ product, isDarkMode }) {
         </div>
         <div
           className={`bg-white flex flex-col items-center justify-center absolute w-[100%] cursor-pointer rounded-lg transition-all duration-200 text-ACMDARK ease-in	
-        ${hovered ? "-translate-y-16  shadow-[0px_-26px_15px_0px_rgba(255,255,255)] h-[35%]" : "translate-y-8 h-5"
+        ${hovered ? "-translate-y-16  shadow-[0px_-26px_9px_0px_rgba(255,255,255)] h-[35%]" : "translate-y-8 h-5"
             }`}
         >
           <h1 className="text-lg bold">{title}</h1>
