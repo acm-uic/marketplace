@@ -12,7 +12,7 @@ export default function ProductList({productList, isDarkMode }) {
   return (
     <div
       ref={productList} 
-      className={` ${isDarkMode ? 'bg-ACMDARK' : "bg-white"} text-white flex flex-col items-center  justify-center min-h-screen bg-cover bg-center w-full`} >
+      className={` ${isDarkMode ? 'bg-ACMDARK' : "bg-white"} text-white flex flex-col items-center justify-center min-h-screen bg-cover bg-center w-full py-10`} >
       <h1 className={`text-4xl bold ${isDarkMode ? 'text-white' : 'text-ACMDARK'}`}  >Products</h1>
       <div className="flex flex-col items-center justify-center	mt-14">
         <ProductFilter page={page} setPage={setPage} isDarkMode={isDarkMode} />

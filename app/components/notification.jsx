@@ -5,8 +5,8 @@ export default function Notification({selectedQuantity, setShowNotification,titl
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setProgress((prevProgress) => (prevProgress - 1));
-    }, 60); 
+      setProgress((prevProgress) => (prevProgress - 1/2));
+    }, 30); 
 
   }, []);
 
@@ -17,8 +17,8 @@ export default function Notification({selectedQuantity, setShowNotification,titl
   }, [progress, setShowNotification]);
 
   return (
-    <div className="animate-notification absolute w-1/4 h-[80px] translate-y-[-30vh] flex items-center justify-center flex-col bg-ACMDARK text-white rounded-lg">
-      <div className="w-11/12 text-xl font-semibold">
+    <div className="animate-notification px-8 py-1 absolute w-[25vw] lg:w-[30vw] h-24 translate-y-[-31vh] flex items-center justify-center flex-col bg-ACMDARK text-white rounded-lg">
+      <div className="w-full text-xl font-semibold">
         <h1 className="cursor-pointer" onClick={() => setShowNotification(false)}>X</h1>
       </div>
       <h1 className="text-lg font-semibold mb-2">{title} x{selectedQuantity} add to the cart</h1>
